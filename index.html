@@ -982,7 +982,7 @@
           explanation:
             "`\\\\t` inserts a tab space between columns. `\\\\n` moves to a new line. Each row is printed with one `cout` statement.",
           output:
-            "Name     Roll No       Marks\\ Ali       101        85\\ Sara    102         90\\nAhmed     103         78",
+            "Name     Roll No       Marks\\ Ali       101        85\\ Sara    102         90\nAhmed     103         78",
           originalQuestion:
             "Based on Program 1.2: Escape Characters Display a small table of three students using tabs.\nGuidelines\n1. Print the headings Name, Roll No and Marks separated by \\t.\n2. Print three rows of data with the same \\t spacing.\n3. Use one cout statement per row and end each with \\n.",
         },
@@ -1040,7 +1040,7 @@
           code: '#include <iostream>\n  using namespace std;\n\n  int main() {\n      int a = 7, b = 3;\n      cout << "Before: a = " << a << ", b = " << b << endl;\n\n      a = a + b;   // a = 10\n      b = a - b;   // b = 7\n      a = a - b;   // a = 3\n\n      cout << "After: a = " << a << ", b = " << b << endl;\n      return 0;\n  }',
           explanation:
             "First `a` becomes 10. Then `b` becomes 7. Finally `a` becomes 3. This swaps the values without a temporary variable.\nBe careful about integer overflow for large values.",
-          output: "Before: a = 7, b = 3\\nAfter: a = 3, b = 7",
+          output: "Before: a = 7, b = 3\nAfter: a = 3, b = 7",
           originalQuestion:
             "Based on Program 2.3: Swapping Two Variables Swap two numbers without using temp.\nGuidelines\n1. Use only arithmetic: a = a + b; then b = a - b; then a = a - b;\n2. Test with a = 7 and b = 3 and print the values before and after.\n3. Draw the values of a and b after each statement in your lab file.",
         },
@@ -1051,7 +1051,7 @@
           code: '#include <iostream>\n  using namespace std;\n\n  int main() {\n      const double PI = 3.141592653589793;\n      double radius = 3.0;\n      double volume = (4.0 / 3.0) * PI * radius * radius * radius;\n\n      cout << "Radius = " << radius << endl;\n      cout << "Volume = " << volume << endl;\n      return 0;\n  }',
           explanation:
             "The formula is `(4/3) × PI × r × r × r`. We use `4.0 / 3.0` so C++ performs decimal division rather than integer division.",
-          output: "Radius = 3\\nVolume = 113.097",
+          output: "Radius = 3\nVolume = 113.097",
           originalQuestion:
             "Based on Program 2.4: Constants: Area of a Circle Calculate the volume of a sphere of radius 3 using the formula (4/3) x PI x r x r x r.\nGuidelines\n1. Declare PI with const and the radius as a double.\n2. Write 4.0 / 3.0 (not 4 / 3), because integer division would give 1.\n3. Print the radius and the volume with labels.",
         },
@@ -1253,7 +1253,7 @@
           code: '#include <iostream>\n  using namespace std;\n\n  int main() {\n      int n = 2;\n      while (n <= 20) {\n          cout << n << " ";\n          n += 2;\n      }\n\n      cout << endl;\n      int count = 10;\n      while (count >= 1) {\n          cout << count << " ";\n          count--;\n      }\n      return 0;\n  }',
           explanation:
             "The first `while` loop starts at 2 and adds 2 each time. The second starts at 10 and subtracts 1 until it reaches 1.",
-          output: "2 4 6 8 10 12 14 16 18 20\\n10 9 8 7 6 5 4 3 2 1",
+          output: "2 4 6 8 10 12 14 16 18 20\n10 9 8 7 6 5 4 3 2 1",
           originalQuestion:
             "Based on Program 7.1: Counting and Doubling with while Print the even numbers from 2 to 20 and then a countdown from 10 to 1.\nGuidelines\n1. Use a while loop with a counter that increases by 2 for the even numbers.\n2. Use a second while loop whose counter decreases by 1 for the countdown.\n3. Print each series on one line separated by spaces.",
         },
@@ -1321,7 +1321,7 @@
           code: '#include <iostream>\n  using namespace std;\n\n  int main() {\n      for (int row = 1; row <= 5; row++) {\n          for (int col = 1; col <= 6 - row; col++)\n               cout << "*";\n          cout << endl;\n      }\n      return 0;\n  }',
           explanation:
             "The outer loop controls rows. The inner loop prints `6 - row` stars. So the rows contain 5, 4, 3, 2 and 1 stars.",
-          output: "*****\\n****\\n***\\n**\\n*",
+          output: "*****\n****\n***\n**\n*",
           originalQuestion:
             "Based on Program 8.3: Star and Number Triangles Print an inverted star triangle of 5 rows (5 stars in the first row, 1 in the last).\nGuidelines\n1. The outer loop runs for rows 1 to 5.\n2. The inner loop must print (6 - row) stars on each row.\n3. Print a new line after each row.",
         },
@@ -1344,7 +1344,7 @@
           code: '#include <iostream>\n  using namespace std;\n\n  int main() {\n      for (int i = 100; i <= 200; i++) {\n          if (i % 13 == 0) {\n               cout << "First multiple = " << i << endl;\n               break;\n          }\n      }\n      cout << "Program continued after the loop." << endl;\n      return 0;\n  }',
           explanation:
             "The loop checks numbers in increasing order. When the remainder is zero, the first matching number is printed and\n`break` exits the loop.",
-          output: "First multiple = 104\\nProgram continued after the loop.",
+          output: "First multiple = 104\nProgram continued after the loop.",
           originalQuestion:
             "Based on Program 9.1: Stopping with break Find the first number between 100 and 200 that is divisible by 13.\nGuidelines\n1. Use a for loop from 100 to 200 and test i % 13 == 0.\n2. When found, print the number and leave the loop using break.\n3. Print a message after the loop to show the program continued.",
         },
@@ -1356,7 +1356,7 @@
           code: '#include <iostream>\n  using namespace std;\n\n  int main() {\n      int sum = 0;\n      for (int i = 1; i <= 15; i++) {\n          if (i % 5 == 0)\n               continue;\n          cout << i << " ";\n          sum += i;\n      }\n      cout << "\\nSum = " << sum << endl;\n      return 0;\n  }',
           explanation:
             "`continue` skips the rest of the current loop iteration. Multiples of 5 are not printed and are not added to the sum.",
-          output: "1 2 3 4 6 7 8 9 11 12 13 14\\nSum = 90",
+          output: "1 2 3 4 6 7 8 9 11 12 13 14\nSum = 90",
           originalQuestion:
             "Based on Program 9.2: Skipping with continue Print the numbers 1 to 15 but skip those divisible by 5.\nGuidelines\n1. Use continue when i % 5 == 0.\n2. Keep a sum of the numbers that are printed.\n3. Print the sum on a new line after the loop.",
         },
@@ -1448,7 +1448,7 @@
           code: '#include <iostream>\n  using namespace std;\n\n  enum Signal { RED, YELLOW, GREEN };\n\n  int main() {\n      Signal current = RED;\n\n      for (int i = 0; i < 3; i++) {\n          cout << "Signal number: " << current << " - ";\n          switch (current) {\n              case RED: cout << "Stop"; break;\n              case YELLOW: cout << "Get ready"; break;\n              case GREEN: cout << "Go"; break;\n          }\n          cout << endl;\n          current = static_cast<Signal>(current + 1);\n      }\n      return 0;\n  }',
           explanation:
             "By default, enum values start at 0, so RED=0, YELLOW=1 and GREEN=2. The `switch` selects the matching action.\nThe cast advances to the next enum value.",
-          output: "0 - Stop\\n1 - Get ready\\n2 - Go",
+          output: "0 - Stop\n1 - Get ready\n2 - Go",
           originalQuestion:
             "Based on Program 11.3: Enumeration Create enum Signal { RED, YELLOW, GREEN } and print the action for the signal.\nGuidelines\n1. Declare a Signal variable and set it to one of the three names.\n2. Use a switch: RED = Stop, YELLOW = Get ready, GREEN = Go.\n3. Print the number of the signal as well, and change the variable to test all three.",
         },
@@ -1470,7 +1470,7 @@
           code: "#include <iostream>\n  using namespace std;\n\n  long long power(int base, int exp) {\n      if (exp == 0)\n          return 1;\n      return base * power(base, exp - 1);\n  }\n\n  int main() {\n      cout << power(2, 8) << endl;\n      cout << power(5, 3) << endl;\n      return 0;\n  }",
           explanation:
             "When the exponent reaches zero, return 1 because any non-zero base to the power zero is 1. Otherwise multiply the\nbase by the result with exponent one smaller. This version expects a non-negative exponent.",
-          output: "256\\n125",
+          output: "256\n125",
           originalQuestion:
             "Based on Program 12.2: Fibonacci Series Write a recursive function power(base, exp) without using pow().\nGuidelines\n1. Base case: when exp is 0 the answer is 1.\n2. Recursive step: power(b, e) = b * power(b, e - 1).\n3. Test with power(2, 8) = 256 and power(5, 3) = 125.",
         },
@@ -1481,7 +1481,7 @@
           code: "#include <iostream>\n  using namespace std;\n\n  int sumDigits(int n) {\n      if (n == 0)\n          return 0;\n      return n % 10 + sumDigits(n / 10);\n  }\n\n  int main() {\n      cout << sumDigits(482) << endl;\n      cout << sumDigits(9005) << endl;\n      return 0;\n  }",
           explanation:
             "The last digit is `n % 10`. The remaining digits are `n / 10`. The function adds the last digit to the sum of the remaining\ndigits. The base case is zero.",
-          output: "14\\n14",
+          output: "14\n14",
           originalQuestion:
             "Based on Program 12.3: Going Down and Coming Back Write a recursive function sumDigits(n) that adds the digits of a number.\nGuidelines\n1. Base case: if n is 0, return 0.\n2. Recursive step: sumDigits(n) = n % 10 + sumDigits(n / 10).\n3. Test with 482 (answer 14) and 9005 (answer 14).",
         },
@@ -1492,7 +1492,7 @@
           code: "#include <iostream>\n  using namespace std;\n\n  inline double celsiusToFahrenheit(double c) {\n      return c * 9.0 / 5 + 32;\n  }\n\n  int main() {\n      cout << celsiusToFahrenheit(0) << endl;\n      cout << celsiusToFahrenheit(37) << endl;\n      cout << celsiusToFahrenheit(100) << endl;\n      return 0;\n  }",
           explanation:
             "The conversion formula is `F = C × 9/5 + 32`. An `inline` function is a request to the compiler to consider expanding the\nfunction at its call site; the compiler decides whether to do so.",
-          output: "32\\n98.6\\n212",
+          output: "32\n98.6\n212",
           originalQuestion:
             "Based on Program 13.1: inline Function Write an inline function celsiusToFahrenheit(double c).\nGuidelines\n1. Use the formula F = c * 9.0 / 5 + 32 (write 9.0, not 9).\n2. Print the result for 0, 37 and 100 degrees Celsius.\n3. Expected results: 32, 98.6 and 212.",
         },
@@ -1515,7 +1515,7 @@
           code: "#include <iostream>\n  using namespace std;\n\n  int maxOf(int a, int b) {\n      return (a > b) ? a : b;\n  }\n\n  double maxOf(double a, double b) {\n      return (a > b) ? a : b;\n  }\n\n  int maxOf(int a, int b, int c) {\n      return maxOf(maxOf(a, b), c);\n  }\n\n  int main() {\n      cout << maxOf(3, 8) << endl;\n      cout << maxOf(4.5, 2.8) << endl;\n      cout << maxOf(3, 9, 6) << endl;\n      return 0;\n  }",
           explanation:
             "Function overloading means using the same function name with different parameter types or counts. C++ chooses the\nmatching version based on the arguments.",
-          output: "8\\n4.5\\n9",
+          output: "8\n4.5\n9",
           originalQuestion:
             "Based on Program 13.3: Function Overloading Write maxOf() for two int values, two double values and three int values.\nGuidelines\n1. The three functions share the name maxOf but have different parameters.\n2. Call each version from main() with suitable numbers.\n3. Print the results with labels such as maxOf(3, 8) = 8.",
         },
@@ -1526,7 +1526,7 @@
           code: '#include <iostream>\n  using namespace std;\n\n  void rectangle(int l, int w, int &area, int &perimeter) {\n      area = l * w;\n      perimeter = 2 * (l + w);\n  }\n\n  int main() {\n      int area, perimeter;\n      rectangle(8, 3, area, perimeter);\n      cout << "Area = " << area << endl;\n      cout << "Perimeter = " << perimeter << endl;\n      return 0;\n  }',
           explanation:
             "The `&` in the parameters means reference. The function works with the original variables from `main`, so assigning to\n`area` and `perimeter` changes those variables.",
-          output: "Area = 24\\nPerimeter = 22",
+          output: "Area = 24\nPerimeter = 22",
           originalQuestion:
             "Based on Program 13.4: Call by Value and Call by Reference Write void rectangle(int l, int w, int &area, int &perimeter) to return two results.\nGuidelines\n1. Calculate area = l * w and perimeter = 2 * (l + w) inside the function.\n2. Declare area and perimeter variables in main() and pass them to the function.\n3. Print both values in main() after the call.",
         },

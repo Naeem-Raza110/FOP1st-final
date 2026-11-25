@@ -296,7 +296,6 @@ function selectTask(id,scroll=true){
  if(scroll&&window.innerWidth<=680)taskDetail.scrollIntoView({behavior:'smooth',block:'start'});
 }
 document.getElementById('homeLogo').addEventListener('click',showHome);
-document.getElementById('headerHome').addEventListener('click',showHome);
 document.getElementById('headerTasks').addEventListener('click',()=>showTasks(currentTask));
 document.getElementById('startLearning').addEventListener('click',()=>showTasks(1));
 document.getElementById('seeWorkflow').addEventListener('click',()=>document.getElementById('workflowSection').scrollIntoView({behavior:'smooth'}));
